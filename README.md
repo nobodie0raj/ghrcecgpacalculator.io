@@ -17,7 +17,8 @@
 <!-- Project Description -->
 ## Description
 
-The GHRCE SGPA Calculator is a user-friendly web-based tool that allows GHRCE students to effortlessly calculate their Semester Grade Point Average (SGPA). This calculator takes into account subject scores obtained in theory exams, continuous assessment exams (CAE), internals, and practical exams.
+The GHRCE SGPA Calculator is a user-friendly web-based tool that allows GHRCE students to effortlessly calculate their Semester Grade Point Average (SGPA). This calculator takes into account subject scores obtained in theory exams, continuous assessment exams (CAE), internals, and practical exams. Currently Available for - Artificial Intelligence, Computer Science & Engineering, Information &
+Technology, Data Science, Computer Science (Internet of Things), Computer Science (Artificial Intelligence & Machine Learning) & Computer Science (Cyber Security), Computer Science (Artificial Intelligence)
 
 <!-- Project Screenshot -->
 <p align="center">
