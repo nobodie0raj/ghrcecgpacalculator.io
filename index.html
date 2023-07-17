@@ -3,59 +3,96 @@
 <head>
   <title>GHRCE SGPA Calculator</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c4ebf8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-top: 80px;
+      height: 80vh; /* Added property to extend container to the bottom */
+      display: flex;
+      flex-direction: column; /* Added to center content vertically */
+      justify-content: center; /* Added to center content vertically */
+    }
+
+    h1 {
+      font-family: "Verdana", sans-serif;
+      color: #08209c;
+      font-size: 40px;
+      margin-bottom: 20px;
+text-align:center;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #08209c;
+      color: #fff;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      margin-right: 20px;
+text-align:center;
+    }
+
+    .button:hover {
+      background-color: #044781;
+    }
+
+    .button:last-child {
+      margin-right: 0;
+    }
+
+    .footer {
+      margin-top: auto;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .footer a {
+      color: #08209c;
+      text-decoration: none;
+    }
+ .disclaimer {
+      font-size: 12px;
+      color: #999;
+      margin-top: 20px;
+margin-bottom: auto;
+text-align: bottom;
+    }
+
+  </style>
 </head>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background-color: #c4ebf8;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-h1 {
-  font-family: "Arial Black", sans-serif;
-  color: #08209c;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.buttons {
-  margin-top: 40px;
-}
-
-.button {
-  display: inline-block;
-  padding: 14px 28px;
-  background-color: #08209c;
-  color: #fff;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  margin-right: 20px;
-}
-
-.button:hover {
-  background-color: #044781;
-}
-
-.button:last-child {
-  margin-right: 0;
-} </style>
 <body>
   <div class="container">
     <h1>GHRCE SGPA Calculator</h1>
     <div class="buttons">
       <a href="SEM1latest.html" class="button">Semester 1</a>
       <a href="SEM2latest.html" class="button">Semester 2</a>
+    </div>
+    <div class="footer">
+      Made with love <span style="font-size: 24px;">&hearts;</span> by nobodie_0<br>
+      <a href="view-source-code.html">View source code</a>
+<p class="disclaimer">This tool is not an official application. It is created purely for educational purposes and personal use.</p>
     </div>
   </div>
 </body>
