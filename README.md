@@ -6,7 +6,7 @@
   <b>A Simple and Convenient Tool to Calculate SGPA</b>
   <br>
   <br>
-  <a href="https://nonodie0raj.github.io/ghrce-sgpa-calculator">View Demo</a>
+  <a href="https://nobodie0raj.github.io/ghrcecgpacalculator.io/">View Demo</a>
   ·
   <a href="#usage">Usage</a>
   ·
