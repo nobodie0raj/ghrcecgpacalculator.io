@@ -21,7 +21,7 @@ The GHRCE SGPA Calculator is a user-friendly web-based tool that allows GHRCE st
 
 <!-- Project Screenshot -->
 <p align="center">
-  <img src="screenshot.png" alt="GHRCE SGPA Calculator Screenshot">
+  <img src="images">
 </p>
 
 ## Features
