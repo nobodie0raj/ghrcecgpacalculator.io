@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GHRCE SEM-I SGPA Calculator</title>
+   <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #c4ebf8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: "Arial Black", sans-serif;
+      color: #08209c;
+      text-align: center;
+    }
+
+    #cgpaForm {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    table tr th,
+    table tr td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    table tr th {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #ff8c00;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family:  Georgia, serif;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #ff6f00;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px;
+      background-color: #08209c;
+      color: #fff;
+      border-radius: 3px;
+
+    }
+
+    #result span {
+      font-weight: bold;
+    }
+    #disclaimer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>GHRCE SEM-I SGPA Calculator</h1>
+  <div id="cgpaForm">
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Endsem</th>
+        <th>CAE</th>
+        <th>Internals</th>
+      </tr>
+      <tr>
+        <td>EP Theory</td>
+        <td><input type="number" id="ecEndsem" required placeholder="Max: 50"></td>
+        <td><input type="number" id="ecCAE" required placeholder="Max: 15"></td>
+        <td><input type="number" id="ecInternals" required placeholder="Max: 10"></td>
+      </tr>
+     
+      <tr>
+        <td>CP Theory</td>
+        <td><input type="number" id="mdcEndsem" required placeholder="Max: 50"></td>
+        <td><input type="number" id="mdcCAE" required placeholder="Max: 15"></td>
+        <td><input type="number" id="mdcInternals" required placeholder="Max: 10"></td>
+      </tr>
+   
+      <tr>
+        <td>FDA Theory</td>
+        <td><input type="number" id="cmsEndsem" required placeholder="Max: 50"></td>
+        <td><input type="number" id="cmsCAE" required placeholder="Max: 15"></td>
+        <td><input type="number" id="cmsInternals" required placeholder="Max: 10"></td>
+      </tr>
+     
+      <tr>
+        <td>M&DC Theory</td>
+        <td><input type="number" id="lasEndsem" required placeholder="Max: 50"></td>
+        <td><input type="number" id="lasCAE" required placeholder="Max: 15"></td>
+        <td><input type="number" id="lasInternals" required placeholder="Max: 10"></td>
+      </tr>
+
+      <tr>
+        <td>IDDC Theory</td>
+        <td><input type="number" id="icdeEndsem" required placeholder="Max: 50"></td>
+        <td><input type="number" id="icdeCAE" required placeholder="Max: 15"></td>
+        <td><input type="number" id="icdeInternals" required placeholder="Max: 10"></td>
+      </tr>
+
+      <tr>
+        <td>EP Practical</td>
+        <td colspan="3"><input type="number" id="ecPractical" required placeholder="Max: 25"></td>
+      </tr>
+      
+      <tr>
+        <td>PIDT Practical</td>
+        <td colspan="3"><input type="number" id="mdcPractical" required placeholder="Max: 25"></td>
+      </tr>
+  
+      <tr>
+        <td>FDA Practical</td>
+        <td colspan="3"><input type="number" id="cmsPractical" required placeholder="Max: 25"></td>
+      </tr>
+
+      <tr>
+        <td>CP Practical</td>
+        <td colspan="3"><input type="number" id="ppsPractical" required placeholder="Max: 50"></td>
+      </tr>
+   
+      <tr>
+        <td>BME Practical</td>
+        <td colspan="3"><input type="number" id="iotPractical" required placeholder="Max: 25"></td>
+      </tr>
+
+      <tr>
+        <td>DronesPractical</td>
+        <td colspan="3"><input type="number" id="foreignLanguagePractical" required placeholder="Max: 25"></td>
+      </tr>
+<tr>
+        <td>IDDC Practical</td>
+        <td colspan="3"><input type="number" id="iddcPractical" required placeholder="Max: 25"></td>
+      </tr>
+    </table>
+
+    <button onclick="calculateCGPA()">Calculate SGPA</button>
+  </div>
+
+  <div id="result"></div>
+  <div id="disclaimer">
+    <p>This site is not an official tool for calculating SGPA. Results may vary. Please consult with your institution for official SGPA calculations.</p>
+  </div>
+
+  <script>
+    function calculateCGPA() {
+      // Retrieve input values
+      var ecEndsem = parseInt(document.getElementById("ecEndsem").value);
+      var ecCAE = parseInt(document.getElementById("ecCAE").value);
+      var ecInternals = parseInt(document.getElementById("ecInternals").value);
+      var mdcEndsem = parseInt(document.getElementById("mdcEndsem").value);
+      var mdcCAE = parseInt(document.getElementById("mdcCAE").value);
+      var mdcInternals = parseInt(document.getElementById("mdcInternals").value);
+      var cmsEndsem = parseInt(document.getElementById("cmsEndsem").value);
+      var cmsCAE = parseInt(document.getElementById("cmsCAE").value);
+      var cmsInternals = parseInt(document.getElementById("cmsInternals").value);
+      var lasEndsem = parseInt(document.getElementById("lasEndsem").value);
+      var lasCAE = parseInt(document.getElementById("lasCAE").value);
+      var lasInternals = parseInt(document.getElementById("lasInternals").value);
+      var icdeEndsem = parseInt(document.getElementById("icdeEndsem").value);
+      var icdeCAE = parseInt(document.getElementById("icdeCAE").value);
+      var icdeInternals = parseInt(document.getElementById("icdeInternals").value);
+      var ecPractical = parseInt(document.getElementById("ecPractical").value);
+      var mdcPractical = parseInt(document.getElementById("mdcPractical").value);
+      var cmsPractical = parseInt(document.getElementById("cmsPractical").value);
+      var ppsPractical = parseInt(document.getElementById("ppsPractical").value);
+      var iotPractical = parseInt(document.getElementById("iotPractical").value);
+      var foreignLanguagePractical = parseInt(document.getElementById("foreignLanguagePractical").value);
+var iddcPractical = parseInt(document.getElementById("foreignLanguagePractical").value);
+
+      // RULES
+      if (
+        ecEndsem > 50 ||
+        ecCAE > 15 ||
+        ecInternals > 10 ||
+        mdcEndsem > 50 ||
+        mdcCAE > 15 ||
+        mdcInternals > 10 ||
+        cmsEndsem > 50 ||
+        cmsCAE > 15 ||
+        cmsInternals > 10 ||
+        lasEndsem > 50 ||
+        lasCAE > 15 ||
+        lasInternals > 10 ||
+        icdeEndsem > 50 ||
+        icdeCAE > 15 ||
+        icdeInternals > 10 ||
+        ecPractical > 25 ||
+        mdcPractical > 25 ||
+        cmsPractical > 25 ||
+        ppsPractical > 50 ||
+        iotPractical > 25 ||
+        foreignLanguagePractical > 25 ||
+        iddcPractical > 25
+      ) {
+        alert("Please enter valid scores within the specified range.");
+        return;
+      }
+
+      // Calculate grade points for each subject
+      var ecEndsemGradePoints = Math.round(((ecEndsem + ecInternals + ecCAE) / 75) * 10);
+      var ecPracticalGradePoints = Math.round((ecPractical / 25) * 10);
+      var mdcEndsemGradePoints = Math.round(((mdcEndsem + mdcInternals + mdcCAE) / 75) * 10);
+      var mdcPracticalGradePoints = Math.round((mdcPractical / 25) * 10);
+      var cmsPracticalGradePoints = Math.round((cmsPractical / 25) * 10);
+      var cmsEndsemGradePoints = Math.round(((cmsEndsem + cmsInternals + cmsCAE) / 75) * 10);
+      var ppsPracticalGradePoints = Math.round((ppsPractical / 50) * 10);
+      var foreignLanguagePracticalGradePoints = Math.round((foreignLanguagePractical / 25) * 10);
+      var iotPracticalGradePoints = Math.round((iotPractical / 25) * 10);
+      var lasEndsemGradePoints = Math.round(((lasEndsem + lasInternals + lasCAE) / 75) * 10);
+      var icdeEndsemGradePoints = Math.round(((icdeEndsem + icdeInternals + icdeCAE) / 75) * 10);
+iddcPracticalGradePoints= Math.round((iddcPractical / 25) * 10);
+
+      // Calculate total grade points
+      var totalGradePoints =
+        (ecEndsemGradePoints * 2) +
+        (ecPracticalGradePoints * 1) +
+        (mdcEndsemGradePoints * 2) +
+        (mdcPracticalGradePoints * 1) +
+        (cmsPracticalGradePoints * 1) +
+        (cmsEndsemGradePoints * 1) +
+        (ppsPracticalGradePoints * 2) +
+        (foreignLanguagePracticalGradePoints * 1) +
+        (iotPracticalGradePoints * 1) +
+        (lasEndsemGradePoints * 3) +
+        (icdeEndsemGradePoints * 2)+(iddcPracticalGradePoints*1);
+
+      // Calculate total credit hours
+      var totalCreditHours = 18;
+
+      // CGPA
+      var cgpa = totalGradePoints / totalCreditHours;
+
+      var resultElement = document.getElementById("result");
+      resultElement.innerHTML = "SGPA: <span>" + cgpa.toFixed(2) + "</span>";
+    }
+  </script>
+</body>
+</html>
