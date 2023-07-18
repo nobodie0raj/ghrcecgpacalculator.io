@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>GHRCE SGPA Calculator</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -19,10 +18,10 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
       margin-top: 80px;
-      height: 80vh; /* Added property to extend container to the bottom */
+      height: 80vh;
       display: flex;
-      flex-direction: column; /* Added to center content vertically */
-      justify-content: center; /* Added to center content vertically */
+      flex-direction: column;
+      justify-content: center;
     }
 
     h1 {
@@ -30,7 +29,7 @@
       color: #08209c;
       font-size: 40px;
       margin-bottom: 20px;
-text-align:center;
+      text-align: center;
     }
 
     .buttons {
@@ -49,7 +48,7 @@ text-align:center;
       border-radius: 4px;
       transition: background-color 0.3s ease;
       margin-right: 20px;
-text-align:center;
+      text-align: center;
     }
 
     .button:hover {
@@ -72,15 +71,47 @@ text-align:center;
       color: #08209c;
       text-decoration: none;
     }
- .disclaimer {
+
+    .disclaimer {
       font-size: 12px;
       color: #999;
       margin-top: 20px;
-margin-bottom: auto;
-text-align: bottom;
+      margin-bottom: auto;
+      text-align: bottom;
     }
 
+    /* Media Queries */
+    @media (max-width: 768px) {
+      /* Adjust container width and margin */
+      .container {
+        max-width: 90%;
+        margin-top: 40px;
+      }
+
+      /* Center align buttons */
+      .buttons {
+        text-align: center;
+      }
+
+      /* Reduce font size of h1 */
+      h1 {
+        font-size: 30px;
+      }
+
+      /* Adjust button styles for smaller screens */
+      .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      /* Adjust footer padding */
+      .footer {
+        padding: 10px;
+      }
+    }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div class="container">
@@ -92,10 +123,10 @@ text-align: bottom;
     <div class="footer">
       Made with love <span style="font-size: 24px;">&hearts;</span> by nobodie_0 & Payal <br>
       <a href="view-source-code.html">View source code</a>
-<p class="disclaimer">This tool is not an official application. It is created purely for educational purposes and personal use. Currently only available for Artificial Intelligence, Computer Science & Engineering, Information &
-Technology, Data Science, Computer Science (Internet of Things), Computer
-Science (Artificial Intelligence & Machine Learning) & Computer Science
-(Cyber Security), Computer Science (Artificial Intelligence)</p>
+      <p class="disclaimer">This tool is not an official application. It is created purely for educational purposes and personal use. Currently only available for Artificial Intelligence, Computer Science & Engineering, Information &
+        Technology, Data Science, Computer Science (Internet of Things), Computer
+        Science (Artificial Intelligence & Machine Learning) & Computer Science
+        (Cyber Security), Computer Science (Artificial Intelligence)</p>
     </div>
   </div>
 </body>
