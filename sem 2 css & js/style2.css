@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #c4ebf8;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Arial Black", sans-serif;
+  color: #08209c;
+  text-align: center;
+}
+
+#cgpaForm {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table tr th,
+table tr td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table tr th {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family:  Georgia, serif;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #ff6f00;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #08209c;
+  color: #fff;
+  border-radius: 3px;
+}
+
+#result span {
+  font-weight: bold;
+}
+
+#disclaimer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
