@@ -236,17 +236,18 @@
       }
 
       // Calculate grade points for each subject
-      var ecEndsemGradePoints = Math.round(((ecEndsem + ecInternals + ecCAE) / 75) * 10);
-      var ecPracticalGradePoints = Math.round((ecPractical / 25) * 10);
-      var mdcEndsemGradePoints = Math.round(((mdcEndsem + mdcInternals + mdcCAE) / 75) * 10);
-      var mdcPracticalGradePoints = Math.round((mdcPractical / 25) * 10);
-      var cmsPracticalGradePoints = Math.round((cmsPractical / 25) * 10);
-      var cmsEndsemGradePoints = Math.round(((cmsEndsem + cmsInternals + cmsCAE) / 75) * 10);
-      var ppsPracticalGradePoints = Math.round((ppsPractical / 50) * 10);
-      var foreignLanguagePracticalGradePoints = Math.round((foreignLanguagePractical / 25) * 10);
-      var iotPracticalGradePoints = Math.round((iotPractical / 25) * 10);
-      var lasEndsemGradePoints = Math.round(((lasEndsem + lasInternals + lasCAE) / 75) * 10);
-      var icdeEndsemGradePoints = Math.round(((icdeEndsem + icdeInternals + icdeCAE) / 75) * 10);
+       var ecEndsemGradePoints = (((ecEndsem + ecInternals + ecCAE) / 75) * 10);
+      var ecPracticalGradePoints = ((ecPractical / 25) * 10);
+      var mdcEndsemGradePoints = (((mdcEndsem + mdcInternals + mdcCAE) / 75) * 10);
+      var mdcPracticalGradePoints = ((mdcPractical / 25) * 10);
+      var cmsPracticalGradePoints = ((cmsPractical / 25) * 10);
+      var cmsEndsemGradePoints = (((cmsEndsem + cmsInternals + cmsCAE) / 75) * 10);
+      var ppsPracticalGradePoints = ((ppsPractical / 50) * 10);
+      var foreignLanguagePracticalGradePoints = ((foreignLanguagePractical / 25) * 10);
+      var iotPracticalGradePoints = ((iotPractical / 25) * 10);
+      var lasEndsemGradePoints = (((lasEndsem + lasInternals + lasCAE) / 75) * 10);
+      var icdeEndsemGradePoints =(((icdeEndsem + icdeInternals + icdeCAE) / 75) * 10);
+
 
       // Calculate total grade points
       var totalGradePoints =
