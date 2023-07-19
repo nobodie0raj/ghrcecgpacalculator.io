@@ -7,109 +7,103 @@
       font-family: Arial, sans-serif;
       background-color: #c4ebf8;
       margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
       padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      margin-top: 80px;
-      height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     h1 {
-      font-family: "Verdana", sans-serif;
+      font-family: "Arial Black", sans-serif;
       color: #08209c;
-      font-size: 40px;
-      margin-bottom: 20px;
       text-align: center;
     }
 
-    .buttons {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 28px;
-      background-color: #08209c;
-      color: #fff;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-      margin-right: 20px;
-      text-align: center;
-    }
-
-    .button:hover {
-      background-color: #044781;
-    }
-
-    .button:last-child {
-      margin-right: 0;
-    }
-
-    .footer {
-      margin-top: auto;
-      font-size: 14px;
-      text-align: center;
+    #cgpaForm {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 5px;
       padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+    }
+
+    table tr th,
+    table tr td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    table tr th {
+      font-weight: bold;
+      background-color: #12399c;
+      color: #fff;
+    }
+
+    table tr td {
       background-color: #fff;
     }
 
-    .footer a {
-      color: #08209c;
-      text-decoration: none;
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
     }
 
-    .disclaimer {
-      font-size: 12px;
-      color: #999;
+    h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #ff8c00;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-family: Georgia, serif;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #ff6f00;
+    }
+
+    #result {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #d26411;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#result span {
+  font-weight: bold;
+}
+
+    #disclaimer {
+      text-align: center;
       margin-top: 20px;
-      margin-bottom: auto;
-      text-align: bottom;
+      font-size: 14px;
+      color: #888;
     }
 
-    /* Media Queries */
-    @media (max-width: 768px) {
-      /* Adjust container width and margin */
-      .container {
-        max-width: 90%;
-        margin-top: 40px;
-      }
-
-      /* Center align buttons */
-      .buttons {
-        text-align: center;
-      }
-
-      /* Reduce font size of h1 */
-      h1 {
-        font-size: 30px;
-      }
-
-      /* Adjust button styles for smaller screens */
-      .button {
-        padding: 10px 20px;
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-
-      /* Adjust footer padding */
-      .footer {
-        padding: 10px;
-      }
-    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
