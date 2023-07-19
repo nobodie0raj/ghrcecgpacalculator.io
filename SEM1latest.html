@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>GHRCE SEM-I SGPA Calculator</title>
-   <style>
-
+ <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #c4ebf8;
@@ -23,12 +22,13 @@
       background-color: #fff;
       border-radius: 5px;
       padding: 20px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     table {
       width: 100%;
       margin-bottom: 20px;
+      border-collapse: collapse;
     }
 
     table tr th,
@@ -40,6 +40,12 @@
 
     table tr th {
       font-weight: bold;
+      background-color: #12399c;
+      color: #fff;
+    }
+
+    table tr td {
+      background-color: #fff;
     }
 
     input[type="text"],
@@ -67,7 +73,7 @@
       border-radius: 3px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      font-family:  Georgia, serif;
+      font-family: Georgia, serif;
       font-size: 16px;
     }
 
@@ -76,19 +82,21 @@
     }
 
     #result {
-      margin-top: 20px;
-      font-size: 20px;
-      text-align: center;
-      padding: 10px;
-      background-color: #08209c;
-      color: #fff;
-      border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #d26411;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-    }
+#result span {
+  font-weight: bold;
+}
 
-    #result span {
-      font-weight: bold;
-    }
     #disclaimer {
       text-align: center;
       margin-top: 20px;
