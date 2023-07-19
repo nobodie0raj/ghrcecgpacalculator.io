@@ -50,7 +50,7 @@ The project is developed using HTML, CSS, and JavaScript.
 by Rajnand Bhardwaj & Payal Agrawal 
 To set up the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/nobodie0raj/ghrcecgpa-alculator.io`
+1. Clone the repository: `git clone https://github.com/nobodie0raj/ghrcecgpacalculator.io`
 2. Open the project in your preferred code editor.
 3. Customize the calculator according to your requirements.
 4. Open `index.html` in a web browser to view the calculator.
